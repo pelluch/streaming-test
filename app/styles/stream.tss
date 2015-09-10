@@ -1,4 +1,17 @@
 
+".container" : {
+    backgroundColor: 'transparent'
+}
+".container[platform=android]" : {
+    opacity: 1
+}
+
+
+"#background" : {
+    backgroundColor: '#0c242f',
+    opacity: 0.8
+}
+
 "#videoContainer" : {
     width: "90%",
     height: Ti.UI.SIZE,

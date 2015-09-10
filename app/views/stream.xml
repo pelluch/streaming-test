@@ -1,8 +1,10 @@
 <Alloy>
-	<Window class="container" exitOnClose="false" >
-        <View id="outerContainer">
-            <View id="videoContainer">
-                <VideoPlayer id="videoPlayer" ns="Ti.Media" onPostlayout="onPostlayout" onLoad="onLoad">
+	<Window class="container" exitOnClose="false" onOpen="onOpen" >
+        <View id="background" />
+        <View id="outerContainer"> <!-- 95% width -->
+            <View id="videoContainer"> <!-- 90% width -->
+                <VideoPlayer id="videoPlayer" ns="Ti.Media" onPostlayout="onPostlayout" onLoad="onLoad"
+                    onPlaybackstate="onPlaybackstate" >
                 </VideoPlayer>
                 <View id="controlContainer">
                     <ImageView id="pauseImage" onClick="pause" />
