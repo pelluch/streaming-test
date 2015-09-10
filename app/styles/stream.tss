@@ -13,10 +13,12 @@
 }
 
 "#videoContainer" : {
-    width: "90%",
+    width: "95%",
     height: Ti.UI.SIZE,
     backgroundColor: 'transparent',
-    opacity: 0
+    opacity: 0,
+    top: 0,
+    bottom: 10
 }
 
 "#videoPlayer" : {
@@ -24,34 +26,127 @@
     url: "rtsp://edge-cl.edge.mdstrm.com:80/tvn-live/285a5c6dade574d5f111419c85c6cf17_240p",
     fullscreen: false,
     scalingMode : Titanium.Media.VIDEO_SCALING_ASPECT_FIT,
-    mediaControlStyle: Ti.Media.VIDEO_CONTROL_EMBEDDED
+    mediaControlStyle: Ti.Media.VIDEO_CONTROL_NONE
 }
 
 "#controlContainer" : {
     bottom: 0,
-    height: 50,
+    height: "20%",
+    width: Ti.UI.FILL,
+    visible: true
+}
+
+"#controlBackground" : {
     opacity: 0.5,
     backgroundColor: 'black',
-    width: Ti.UI.FILL,
-    visible: false
+    height: Ti.UI.FILL,
+    width: Ti.UI.FILL
 }
 
 "#pauseImage" : {
     image: "/images/pause.png",
-    height: "80%",
-    width: Ti.UI.SIZE
+    height: "40%",
+    width: Ti.UI.SIZE,
+    opacity: 1
 }
 
 "#playImage" : {
     image: "/images/play.png",
-    height: "80%",
+    height: "60%",
     width: Ti.UI.SIZE,
     visible: false
 }
 
+"#fastForward" : {
+    width: Ti.UI.SIZE,
+    height: "40%",
+    left: 10,
+    image: "/images/fast_forward.png"
+}
+
+"#rewind" : {
+    width: Ti.UI.SIZE,
+    height: "40%",
+    right: 10,
+    image: "/images/rewind.png"
+}
+
+"#fullScreenImage" : {
+    image: "/images/full_screen.png",
+    height: "60%",
+    right: 10,
+    width: Ti.UI.SIZE
+}
+
 "#outerContainer" : {
     width: "95%",
-    height: Ti.UI.SIZE,
-    backgroundColor: 'transparent',
     opacity: 0
 }
+
+
+
+"#closeImageContainer" : {
+    height: Ti.UI.SIZE,
+    width: Ti.UI.SIZE
+}
+
+"#closeImage" : {
+    image: "/images/close.png",
+    height: 30
+}
+
+"#circleContainer" : {
+    left: 10,
+    height: Ti.UI.SIZE,
+    width: Ti.UI.SIZE
+}
+
+"#yellowCircle" : {
+    image: "/images/circle_yellow.png",
+    visible: true
+}
+
+"#greenCircle" : {
+    image: "/images/circle_green.png",
+    visible: false
+}
+
+"#redCircle" : {
+    image: "/images/circle_red.png",
+    visible: false
+}
+
+".circle" : {
+    height: 10,
+    width: Ti.UI.SIZE
+}
+
+"#streamingLabel" : {
+    text: "Streaming en vivo ",
+    left: 15,
+    font: {
+        fontFamily: "MovistarText"
+        },
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: 'white'
+    }
+
+    "#nameLabel" : {
+        text: "BLUR",
+        font: {
+            fontFamily: "MovistarText",
+            fontWeight: "bold"
+            },
+            width: Ti.UI.SIZE,
+            height: Ti.UI.SIZE,
+            color: 'white'
+        }
+
+
+        "#topBar" : {
+            top: 10,
+            bottom: 10,
+            height: Ti.UI.SIZE,
+            width: "95%"
+        }

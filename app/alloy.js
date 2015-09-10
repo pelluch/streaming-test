@@ -12,3 +12,4 @@
 
 var App = {};
 App.log = require('log');
+App.ActivityIndicator = require('activity_indicator');

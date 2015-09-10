@@ -1,14 +1,37 @@
 <Alloy>
 	<Window class="container" exitOnClose="false" onOpen="onOpen" >
         <View id="background" />
-        <View id="outerContainer"> <!-- 95% width -->
-            <View id="videoContainer"> <!-- 90% width -->
-                <VideoPlayer id="videoPlayer" ns="Ti.Media" onPostlayout="onPostlayout" onLoad="onLoad"
-                    onPlaybackstate="onPlaybackstate" >
-                </VideoPlayer>
-                <View id="controlContainer">
-                    <ImageView id="pauseImage" onClick="pause" />
-                    <ImageView id="playImage" onClick="play" />
+        <View id="outerContainer" > <!-- 95% width -->
+            <View layout="vertical" onPostlayout="onPostlayout" height="Ti.UI.SIZE">
+                <View id="topBar" layout="horizontal">
+                    <View id="closeImageContainer" onClick="closeStream" >
+                        <ImageView id="closeImage" />
+                    </View>
+                    <Label id="streamingLabel" />
+                    <Label id="nameLabel" />
+                    <View id="circleContainer">
+                        <ImageView id="greenCircle" class="circle"/>
+                        <ImageView id="yellowCircle" class="circle" />
+                        <ImageView id="redCircle" class="circle" />
+                    </View>
+                </View>
+                <View id="videoContainer"> <!-- 90% width -->
+                    <VideoPlayer id="videoPlayer" ns="Ti.Media">
+                    </VideoPlayer>
+                    <View id="controlContainer">
+                        <View id="controlBackground" />
+                        <View height="Ti.UI.FILL" width="Ti.UI.FILL" backgroundColor="transparent">
+                            <View layout="horizontal" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+                                <ImageView id="rewind" />
+                                <View height="Ti.UI.SIZE" width="Ti.UI.SIZE">
+                                    <ImageView id="pauseImage" onClick="pause" />
+                                    <ImageView id="playImage" onClick="play" />
+                                </View>                            
+                                <ImageView id="fastForward" />
+                            </View>
+                            <ImageView id="fullScreenImage" onClick="viewFullScreen" />
+                        </View>                        
+                    </View>
                 </View>
             </View>
         </View>
