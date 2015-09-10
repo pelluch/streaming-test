@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="window" class="container" exitOnClose="false">
+        <VideoPlayer id="videoPlayer" ns="Ti.Media">
+        </VideoPlayer>
+    </Window>
+</Alloy>

@@ -1,0 +1,16 @@
+
+".container" : {
+  backgroundColor: "#0c242f"
+}
+
+"#window" : {
+    orientationModes: [ Ti.UI.LANDSCAPE_LEFT ]
+}
+
+"#videoPlayer" : {
+    autoplay: true,
+    url: "rtsp://edge-cl.edge.mdstrm.com:80/tvn-live/285a5c6dade574d5f111419c85c6cf17_240p",
+    fullscreen: false,
+    scalingMode : Titanium.Media.VIDEO_SCALING_ASPECT_FIT,
+    mediaControlStyle: Ti.Media.VIDEO_CONTROL_FULLSCREEN
+}

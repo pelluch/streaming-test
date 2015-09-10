@@ -46,7 +46,7 @@ function closeStream(e) {
 }
 
 function viewFullScreen(e) {
-    var videoPlayer = Ti.Media.createVideoPlayer({
+    /*var videoPlayer = Ti.Media.createVideoPlayer({
         autoplay: true,
         url: "rtsp://edge-cl.edge.mdstrm.com:80/tvn-live/285a5c6dade574d5f111419c85c6cf17_240p",
         fullscreen: true,
@@ -70,8 +70,16 @@ function viewFullScreen(e) {
     if($.videoPlayer.currentPlaybackTime > 0) {
         lastPlaybackTime = $.videoPlayer.currentPlaybackTime;    
     }
+    */
+    Alloy.createController('full_stream', {
+        videoPlayer: $.videoPlayer
+    }).getView().open({
+        theme: "Theme.NoActionBar"
+    });
+
+    /*
     App.log(lastPlaybackTime);
-    /* if(!loading) {
+    if(!loading) {
         $.yellowCircle.show();
         $.greenCircle.hide();
         App.ActivityIndicator.showInView($.outerContainer, {
@@ -80,8 +88,9 @@ function viewFullScreen(e) {
             touchEnabled: false
         });
     }
-    */
+    
     $.videoContainer.setOpacity(0);
+    */
 }
 
 function onPostlayout(e) {
