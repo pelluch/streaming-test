@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+        <Label text="Hello world" top="10" left="10" color="black" />
+		<Button id="streamButton" title="Stream" onClick="showStream" />
+	</Window>
+</Alloy>

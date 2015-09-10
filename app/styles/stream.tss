@@ -1,0 +1,44 @@
+
+"#videoContainer" : {
+    width: "90%",
+    height: Ti.UI.SIZE,
+    backgroundColor: 'transparent',
+    opacity: 0
+}
+
+"#videoPlayer" : {
+    autoplay: true,
+    url: "rtsp://edge-cl.edge.mdstrm.com:80/tvn-live/285a5c6dade574d5f111419c85c6cf17_240p",
+    fullscreen: false,
+    scalingMode : Titanium.Media.VIDEO_SCALING_ASPECT_FIT,
+    mediaControlStyle: Ti.Media.VIDEO_CONTROL_EMBEDDED
+}
+
+"#controlContainer" : {
+    bottom: 0,
+    height: 50,
+    opacity: 0.5,
+    backgroundColor: 'black',
+    width: Ti.UI.FILL,
+    visible: false
+}
+
+"#pauseImage" : {
+    image: "/images/pause.png",
+    height: "80%",
+    width: Ti.UI.SIZE
+}
+
+"#playImage" : {
+    image: "/images/play.png",
+    height: "80%",
+    width: Ti.UI.SIZE,
+    visible: false
+}
+
+"#outerContainer" : {
+    width: "95%",
+    height: Ti.UI.SIZE,
+    backgroundColor: 'transparent',
+    opacity: 0
+}

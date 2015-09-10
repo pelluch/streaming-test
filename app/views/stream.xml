@@ -1,0 +1,14 @@
+<Alloy>
+	<Window class="container" exitOnClose="false" >
+        <View id="outerContainer">
+            <View id="videoContainer">
+                <VideoPlayer id="videoPlayer" ns="Ti.Media" onPostlayout="onPostlayout" onLoad="onLoad">
+                </VideoPlayer>
+                <View id="controlContainer">
+                    <ImageView id="pauseImage" onClick="pause" />
+                    <ImageView id="playImage" onClick="play" />
+                </View>
+            </View>
+        </View>
+    </Window>
+</Alloy>
